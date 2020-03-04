@@ -1,6 +1,6 @@
 package de.qaware.monad_examples.part1_extensions
 
-import de.qaware.monad_examples.*
+import de.qaware.monad_examples.part0_baseline.*
 
 
 fun evalSet(exp: Expression): Set<Double> =
@@ -18,6 +18,5 @@ fun evalSet(exp: Expression): Set<Double> =
                 leftResults.flatMap { l -> rightResults.map { r -> l / r } }.toSet()
             }
             is Range -> (exp.from .. exp.to).map(Int::toDouble).toSet()
-
         }
 

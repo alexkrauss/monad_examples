@@ -1,29 +1,6 @@
 package de.qaware.monad_examples.part1_extensions
 
-import de.qaware.monad_examples.*
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+import de.qaware.monad_examples.part0_baseline.*
 
 fun evalNull(exp: Expression): Double? =
         when (exp) {

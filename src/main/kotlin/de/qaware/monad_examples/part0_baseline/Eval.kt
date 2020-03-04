@@ -1,7 +1,5 @@
 package de.qaware.monad_examples.part0_baseline
 
-import de.qaware.monad_examples.*
-
 
 fun eval(exp: Expression): Double =
         when (exp) {

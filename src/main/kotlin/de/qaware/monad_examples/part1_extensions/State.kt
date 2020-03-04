@@ -1,10 +1,8 @@
 package de.qaware.monad_examples.part1_extensions
 
-import de.qaware.monad_examples.*
+import de.qaware.monad_examples.part0_baseline.*
 
-typealias Counter = Int
-
-fun evalState(exp: Expression, count: Counter): Pair<Double, Counter> =
+fun evalState(exp: Expression, count: Int): Pair<Double, Int> =
         when (exp) {
             is Constant -> Pair(exp.num, count + 1)
             is Plus ->  {

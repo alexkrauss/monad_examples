@@ -1,9 +1,9 @@
 package de.qaware.monad_examples.part2_monadic
 
-import de.qaware.monad_examples.*
+import de.qaware.monad_examples.part0_baseline.*
 
 private fun <T>just(x: T): T? = x
-private fun <T, U>T?.bind(f: (x:T) -> U?) = this?.let(f)
+private fun <T, U>T?.bind(f: (T) -> U?): U? = if (this == null) null else f(this)
 
 private fun where(condition: Boolean): Unit? = if (condition) Unit else null
 
@@ -18,7 +18,7 @@ fun evalNullMonadic(exp: Expression): Double? =
             is Div ->
                 evalNullMonadic(exp.left)            .bind { left ->
                 evalNullMonadic(exp.right)           .bind { right ->
-                where(right != 0.0)        .bind {
+                where(right != 0.0)         .bind {
                 just(left / right)
                 }}}
             is Range -> TODO("not supported")

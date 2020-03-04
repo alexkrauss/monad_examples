@@ -1,6 +1,6 @@
 package de.qaware.monad_examples
 
-import de.qaware.monad_examples.part0_baseline.eval
+import de.qaware.monad_examples.part0_baseline.*
 import de.qaware.monad_examples.part1_extensions.evalSet
 import de.qaware.monad_examples.part1_extensions.evalNull
 import de.qaware.monad_examples.part1_extensions.evalState
