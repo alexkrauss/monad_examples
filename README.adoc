@@ -1,1 +1,21 @@
 = Monad examples
+
+This repository contains the example code used for the talk
+"Monads for the working software engineer" I gave at
+QAware Engineering Camp 2020.
+
+It consists of three parts:
+
+* A simple piece of baseline code that implements a simple calculator function
+* Three different extensions of the baseline code in different directions:
+  ** Possibility of `null` return value
+  ** Multiple results (as a `Set`)
+  ** State (in this case, a counter)
+* A presentation of the same extensions in "monadic form", that is, with the help of two functions `just` and `bind`.
+  While these functions are implemented differently in each case, the main evaluation function is identical, since all
+  all the plumbing is now part of the helper functions. These functions constitute the monad abstraction.
+* As an addition, we also give an implementation of the combined monad (state and set), which still allows expressing
+  the calculator in the same way.
+
+
+Enjoy!
