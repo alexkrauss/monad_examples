@@ -17,5 +17,8 @@ It consists of three parts:
 * As an addition, we also give an implementation of the combined monad (state and set), which still allows expressing
   the calculator in the same way.
 
+Furthermore, Fabian Huch contributed a Scala version of some of the material, which can also be found here.
+Unlike Kotlin, Scala allows us to define the Monad structure as a general (higher-kinded) trait, instead of just
+a pattern.
 
 Enjoy!
