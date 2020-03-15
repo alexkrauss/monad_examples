@@ -2,6 +2,11 @@ package de.qaware.monad_examples.part1_extensions
 
 import de.qaware.monad_examples.part0_baseline.*
 
+/**
+ * Yet another modification. Now we add a little bit of state, by counting the calculation steps as we go. When we choose
+ * not to use mutable state, the state must be passed explicitly through all recursive calls and the new state is passed
+ * back.
+ */
 fun evalState(exp: Expression, count: Int): Pair<Double, Int> =
         when (exp) {
             is Constant -> Pair(exp.num, count + 1)

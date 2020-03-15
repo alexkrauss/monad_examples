@@ -1,4 +1,4 @@
-package de.qaware.monad_examples.part2_monadic
+package de.qaware.monad_examples.part2_monadic.set
 
 import de.qaware.monad_examples.part0_baseline.*
 
@@ -18,7 +18,7 @@ fun evalSetMonadic(exp: Expression): Set<Double> =
             is Div ->
                 evalSetMonadic(exp.left)                       .bind { left ->
                 evalSetMonadic(exp.right)                      .bind { right ->
-                where(right != 0.0)                   .bind {
+                where(right != 0.0)                            .bind {
                 just(left / right)
                 }}}
 

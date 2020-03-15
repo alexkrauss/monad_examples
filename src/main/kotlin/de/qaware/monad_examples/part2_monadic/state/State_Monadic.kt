@@ -1,4 +1,4 @@
-package de.qaware.monad_examples.part2_monadic
+package de.qaware.monad_examples.part2_monadic.state
 
 import de.qaware.monad_examples.part0_baseline.*
 
@@ -12,7 +12,7 @@ private fun <T, U, S> Stateful<T, S>.bind(f: (T) -> Stateful<U, S>): Stateful<U,
     f(x)(state1)
 }
 
-val increment: Stateful<Unit, Int> = { count -> Pair(Unit, count + 1) }
+private val increment: Stateful<Unit, Int> = { count -> Pair(Unit, count + 1) }
 
 
 fun evalStateMonadic(exp: Expression): Stateful<Double, Int> =
